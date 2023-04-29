@@ -2,7 +2,7 @@ class Strings {
   /* Intro screen contents */
   static final welcomeTxt = '''Hi, my name is''';
   static final name = '''조새벽입니다.'''; // add . at the end
-  static final whatIdo = '''I build things for the mobile/web.'''; // add . at the end
+  static final whatIdo = '''저는 Flutter를 주력으로 사용합니다.'''; // add . at the end
   static final introAbout =
       '''I’m a software engineer specializing in building (and occasionally designing) exceptional digital experiences. Currently, I’m focused on building accessible, human-centered products at ''';
   static final currentOrgName = '''NetAccess.'''; // add . at the end
