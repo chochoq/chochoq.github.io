@@ -1,4 +1,4 @@
-name: gh-pages
+name: master
 
 on:
   push:
