@@ -27,14 +27,15 @@ class AppClass {
         tech2: "Node.js",
         tech3: "MySQL"),
     WorkModel(
-        projectUri: 'https://devchocho.notion.site/65559e93337146f690b1c17875fd9f90',
+        projectUri:
+            'https://velog.io/@chocho/%EB%89%B4%EB%8B%89-%ED%81%B4%EB%A1%A0%EC%BD%94%EB%94%A9',
         projectTitle: "뉴닉 클론코딩",
         projectContent: "즐겨 구독하던 뉴닉 뉴스레터의 홈페이지를 클론코딩보았습니다.",
         tech1: "React",
         tech2: "Aws Sever(S3,EC2)",
         tech3: "Axios"),
     WorkModel(
-        projectUri: 'https://devchocho.notion.site/651928c3a9e8462d81ccf350cae3172e',
+        projectUri: 'https://velog.io/@chocho/%EB%89%B4%ED%8E%B8%ED%95%A8.md',
         projectTitle: "뉴스레터저장소 뉴편함",
         projectContent: '''메일링서비스 춘추전국시대지만, 정작 어떤 메일링 서비스가 있는지 찾아보기는 쉽지 않습니다.
 
@@ -45,7 +46,8 @@ class AppClass {
         tech2: "Python",
         tech3: "MongoDB"),
     WorkModel(
-        projectUri: 'https://devchocho.notion.site/723d2b846d494353870120d6dc9127d8',
+        projectUri:
+            'https://velog.io/@chocho/%EC%9D%BC%EC%A0%95%EA%B4%80%EB%A6%AC%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EC%98%A4%EB%95%8C',
         projectTitle: "동아리 및 일정관리 오때",
         projectContent:
             '''소규모 모임 약속을 잡게 되면 서로의 스케쥴을 항상 먼저 물어보게 됩니다. 하지만 다수의 사람이 같은 날짜에 시간이 비는 경우는 드뭅니다. 서로의 스케쥴을 확인하며 약속 혹은 모임을 수월하게 잡을 수 있다면 어떨까요?
