@@ -64,24 +64,25 @@ class _IntroMobileState extends State<IntroMobile> {
                 child: Container(
                   child: RichText(
                       text: TextSpan(
-                          text: Strings.introAbout,
-                          style: GoogleFonts.roboto(
-                            color: AppColors().textLight,
-                            letterSpacing: 1,
-                            height: 1.5,
-                            fontSize: 17,
-                          ),
-                          children: <TextSpan>[
-                        TextSpan(
-                          text: Strings.currentOrgName,
-                          style: GoogleFonts.roboto(
-                            color: AppColors().neonColor,
-                            letterSpacing: 1,
-                            height: 1.5,
-                            fontSize: 17,
-                          ),
-                        )
-                      ])),
+                    text: Strings.introAbout,
+                    style: GoogleFonts.roboto(
+                      color: AppColors().textLight,
+                      letterSpacing: 1,
+                      height: 1.5,
+                      fontSize: 17,
+                    ),
+                    //     children: <TextSpan>[
+                    //   TextSpan(
+                    //     text: Strings.currentOrgName,
+                    //     style: GoogleFonts.roboto(
+                    //       color: AppColors().neonColor,
+                    //       letterSpacing: 1,
+                    //       height: 1.5,
+                    //       fontSize: 17,
+                    //     ),
+                    //   )
+                    // ]
+                  )),
                 ),
               ),
               Padding(
