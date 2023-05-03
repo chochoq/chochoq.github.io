@@ -13,7 +13,7 @@ class AppClass {
 
   /* URL */
   static final resumeDownloadURL =
-      '''https://drive.google.com/file/d/1X4Z_hgsTB72g81EXWf1DCeBv4oF8nfkS/view?usp=share_link''';
+      '''https://drive.google.com/file/d/13Uy-M3X143CF59g6giuM9GKzr4iiHD8o/view?usp=share_link''';
 
   static final gitSafeC19 = '''https://github.com/chochoq''';
 
