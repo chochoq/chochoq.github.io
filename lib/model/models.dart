@@ -16,12 +16,17 @@ class WorkModel {
   String? tech1;
   String? tech2;
   String? tech3;
+  String? appStoreUri;
+  String? playStoreUri;
 
-  WorkModel(
-      {this.projectTitle,
-      this.projectUri,
-      this.projectContent,
-      this.tech1,
-      this.tech2,
-      this.tech3});
+  WorkModel({
+    this.projectTitle,
+    this.projectUri,
+    this.projectContent,
+    this.tech1,
+    this.tech2,
+    this.tech3,
+    this.appStoreUri,
+    this.playStoreUri,
+  });
 }

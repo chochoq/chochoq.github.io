@@ -13,19 +13,25 @@ class AppClass {
 
   /* URL */
   static final resumeDownloadURL =
-      '''https://drive.google.com/file/d/1oQ2bIPglI3oLX0CbkKARhmwUYU1ZTqRz/view?usp=sharing''';
+      '''https://docs.google.com/document/d/1uAWk2VOS0WVBGgOIvLJIrOSOJoWg4NwIZqtDtBzxFdU/edit?usp=sharin''';
 
   static final gitSafeC19 = '''https://github.com/chochoq''';
 
   List<WorkModel> projectList = [
     WorkModel(
-        projectUri: 'https://devchocho.notion.site/6db8e06d8f604e819b503504f161def6',
-        projectTitle: "제주다봄 @PeopleBomb",
+        projectUri:
+            'https://docs.google.com/document/d/1yWUZJ_vy9BbVHZ-S2L-LKGBYu2TZAgPC8oL4oFvZm08/edit?usp=sharing',
+        projectTitle: "제주다봄 \n@PeopleBomb",
         projectContent:
-            '''제주다봄에서는 제주도 여행정보와 함께 제주도 내의 숙박시설과 부동산 관련 정보도 제공하여, 사용자가 제주도에 대한 다양한 정보를 한곳에서 쉽게 확인하고 활용할 수 있도록 도와줍니다.''',
+            '''Peoplebomb 재직시 진행하던 프로젝트인 제주다봄은 제주도 숙박시설과 부동산 관련 정보를 제공하여, 사용자가 제주도에 대한 다양한 정보를 한곳에서 쉽게 확인하고 활용할 수 있도록 도와줍니다. 
+            
+App Store 3천, Play Store 1만1천 다운로드 되었습니다.''',
         tech1: "Flutter",
         tech2: "Node.js",
-        tech3: "MySQL"),
+        tech3: "MySQL",
+        appStoreUri:
+            "https://apps.apple.com/kr/app/%EC%A0%9C%EC%A3%BC%EB%8B%A4%EB%B4%84/id1616083364",
+        playStoreUri: "https://play.google.com/store/apps/details?id=com.peoplebomb.dabom"),
     WorkModel(
         projectUri:
             'https://velog.io/@chocho/%EB%89%B4%EB%8B%89-%ED%81%B4%EB%A1%A0%EC%BD%94%EB%94%A9',

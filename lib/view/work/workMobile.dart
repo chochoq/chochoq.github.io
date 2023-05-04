@@ -79,6 +79,7 @@ class _WorkWebState extends ConsumerState<WorkMobile> {
 
   Tile({required int index}) {
     return InkWell(
+      mouseCursor: MaterialStateMouseCursor.textable,
       onTap: () async {
         switch (index) {
           case 0:
@@ -118,7 +119,7 @@ class _WorkWebState extends ConsumerState<WorkMobile> {
         String data = ref.watch(hoverProvider);
         bool isHovered = (data == "$index");
         return Container(
-          margin: EdgeInsets.all(isHovered ? 8.0 : 0.0),
+          margin: EdgeInsets.all(0.0),
           child: Tooltip(
             message: AppClass().projectList[index].projectTitle.toString() +
                 "\n\n" +
@@ -133,98 +134,143 @@ class _WorkWebState extends ConsumerState<WorkMobile> {
             textStyle: TextStyle(color: Colors.white24),
             preferBelow: true,
             verticalOffset: 20,
-            child: InkWell(
-              onTap: () async {
-                final url = Uri.parse("${AppClass().projectList[index].projectUri}");
-                await launchUrl(url);
-              },
-              child: Card(
-                color: AppColors().cardColor,
-                elevation: 10,
-                child: Container(
-                  padding: EdgeInsets.all(15.0),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          SvgPicture.asset(
-                            'assets/svg/folder.svg',
-                            width: 35,
-                            height: 35,
-                            color: AppColors().neonColor,
-                          ),
-                          SvgPicture.asset(
+            child: Card(
+              color: AppColors().cardColor,
+              elevation: 10,
+              child: Container(
+                padding: EdgeInsets.all(15.0),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        SvgPicture.asset(
+                          'assets/svg/folder.svg',
+                          width: 35,
+                          height: 35,
+                          color: AppColors().neonColor,
+                        ),
+                        InkWell(
+                          onTap: () async {
+                            final url = Uri.parse("${AppClass().projectList[index].projectUri}");
+                            await launchUrl(url);
+                          },
+                          child: SvgPicture.asset(
                             'assets/svg/externalLink.svg',
                             width: 20,
                             height: 20,
                             color: isHovered ? AppColors().neonColor : Colors.white,
                           ),
-                        ],
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(top: 10.0, bottom: 8.0),
-                        child: Row(
-                          children: [
-                            Text(
-                              AppClass().projectList[index].projectTitle.toString(),
-                              textAlign: TextAlign.left,
-                              style: GoogleFonts.robotoSlab(
-                                  color: isHovered ? AppColors().neonColor : Colors.white,
-                                  letterSpacing: 1,
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 18),
-                            ),
-                          ],
                         ),
-                      ),
-                      Expanded(
-                        child: Padding(
-                          padding: const EdgeInsets.only(top: 8.0, bottom: 8.0),
-                          child: Text(
-                            AppClass().projectList[index].projectContent.toString(),
-                            style: GoogleFonts.roboto(
-                              color: AppColors().textLight,
-                              letterSpacing: 1,
-                              height: 1.5,
-                              fontSize: 12,
-                            ),
-                          ),
-                        ),
-                      ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      ],
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(top: 10.0, bottom: 8.0),
+                      child: Row(
+                        mainAxisAlignment:
+                            AppClass().projectList[index].projectTitle.toString().contains('제주다봄')
+                                ? MainAxisAlignment.spaceBetween
+                                : MainAxisAlignment.start,
                         children: [
                           Text(
-                            AppClass().projectList[index].tech1 ?? "",
-                            style: GoogleFonts.roboto(
-                              color: AppColors().textLight,
-                              letterSpacing: 1,
-                              fontSize: 10,
-                            ),
+                            AppClass().projectList[index].projectTitle.toString(),
+                            textAlign: TextAlign.left,
+                            style: GoogleFonts.robotoSlab(
+                                color: isHovered ? AppColors().neonColor : Colors.white,
+                                letterSpacing: 1,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 18),
                           ),
-                          Text(
-                            AppClass().projectList[index].tech2 ?? "",
-                            style: GoogleFonts.roboto(
-                              color: AppColors().textLight,
-                              letterSpacing: 1,
-                              fontSize: 10,
+                          if (AppClass()
+                              .projectList[index]
+                              .projectTitle
+                              .toString()
+                              .contains('제주다봄'))
+                            Row(
+                              children: [
+                                // SizedBox(width: 10),
+                                Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: InkWell(
+                                    onTap: () async {
+                                      final url =
+                                          Uri.parse("${AppClass().projectList[index].appStoreUri}");
+                                      await launchUrl(url);
+                                    },
+                                    child: Image.asset(
+                                      'assets/svg/appStoreLogo.png',
+                                      width: 18,
+                                      height: 18,
+                                    ),
+                                  ),
+                                ),
+                                SizedBox(width: 10),
+                                InkWell(
+                                  onTap: () async {
+                                    final url =
+                                        Uri.parse("${AppClass().projectList[index].playStoreUri}");
+                                    await launchUrl(url);
+                                  },
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(8.0),
+                                    child: Image.asset(
+                                      'assets/svg/playStoreLogo.png',
+                                      width: 18,
+                                      height: 18,
+                                    ),
+                                  ),
+                                ),
+                              ],
                             ),
-                          ),
-                          Text(
-                            AppClass().projectList[index].tech3 ?? "",
-                            style: GoogleFonts.roboto(
-                              color: AppColors().textLight,
-                              letterSpacing: 1,
-                              height: 1.5,
-                              fontSize: 10,
-                            ),
-                          ),
                         ],
-                      )
-                    ],
-                  ),
+                      ),
+                    ),
+                    Expanded(
+                      child: Padding(
+                        padding: const EdgeInsets.only(top: 8.0, bottom: 8.0),
+                        child: Text(
+                          AppClass().projectList[index].projectContent.toString(),
+                          style: GoogleFonts.roboto(
+                            color: AppColors().textLight,
+                            letterSpacing: 1,
+                            height: 1.5,
+                            fontSize: 12,
+                          ),
+                        ),
+                      ),
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        Text(
+                          AppClass().projectList[index].tech1 ?? "",
+                          style: GoogleFonts.roboto(
+                            color: AppColors().textLight,
+                            letterSpacing: 1,
+                            fontSize: 10,
+                          ),
+                        ),
+                        Text(
+                          AppClass().projectList[index].tech2 ?? "",
+                          style: GoogleFonts.roboto(
+                            color: AppColors().textLight,
+                            letterSpacing: 1,
+                            fontSize: 10,
+                          ),
+                        ),
+                        Text(
+                          AppClass().projectList[index].tech3 ?? "",
+                          style: GoogleFonts.roboto(
+                            color: AppColors().textLight,
+                            letterSpacing: 1,
+                            height: 1.5,
+                            fontSize: 10,
+                          ),
+                        ),
+                      ],
+                    )
+                  ],
                 ),
               ),
             ),
