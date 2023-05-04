@@ -1,6 +1,5 @@
 {
   "hosting": {
-    "site": "saebyeok-portfolio-2023",
     "public": "build/web",
     "ignore": [
       "firebase.json",
