@@ -28,7 +28,7 @@ class _RightPaneState extends State<RightPane> {
                         child: RotatedBox(
                             quarterTurns: 1,
                             child: Text(
-                              'chouanau@gmail.com',
+                              'chochoq.dev@gmail.com',
                               style: TextStyle(
                                   letterSpacing: 1,
                                   color: AppColors().textColor,
